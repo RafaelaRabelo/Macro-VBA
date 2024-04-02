@@ -1,0 +1,151 @@
+Sub Carteirinha()
+
+    'PARTE 0
+    
+    Application.ScreenUpdating = False
+    ActiveWorkbook.FollowHyperlink _
+    "Planilha_Carteira.xlsx"
+           
+    
+    'parte 1-2
+    
+    Windows("Planilha_Carteira.xlsx").Activate
+    Sheets("InfoGerais").Select
+    Range("A1:F2").Select
+    Selection.Copy
+    
+    'parte 2-2
+    
+    Windows("Planilha_Despesas.xlsb").Activate
+    Sheets("BD").Select
+    Range("A88:F89").Select
+    Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
+        :=False, Transpose:=False
+    
+       
+   'parte 1-4
+    
+    Windows("Planilha_Carteira.xlsx").Activate
+    Sheets("Disponibilidade").Select
+    Range("A1:D3").Select
+    Selection.Copy
+    
+    'parte 2-4
+    
+    Windows("Planilha_Despesas.xlsb").Activate
+    Sheets("BD").Select
+    Range("A73:D75").Select
+    Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
+        :=False, Transpose:=False
+    
+    'parte 1-4
+    
+    Windows("Planilha_Carteira.xlsx").Activate
+    Sheets("Pagar").Select
+    Range("A1:E30").Select
+    Selection.Copy
+    
+    'parte 2-4
+    
+    Windows("Planilha_Despesas.xlsb").Activate
+    Sheets("BD").Select
+    Range("A2:E31").Select
+    Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
+        :=False, Transpose:=False
+        
+    'parte 1-4
+    
+    Windows("Planilha_Carteira.xlsx").Activate
+    Sheets("Receber").Select
+    Range("A1:E30").Select
+    Selection.Copy
+    
+    'parte 2-4
+    
+    Windows("Planilha_Despesas.xlsb").Activate
+    Sheets("BD").Select
+    Range("A36:E72").Select
+    Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
+        :=False, Transpose:=False
+        
+    'parte 1-4
+    
+    Windows("Planilha_Carteira.xlsx").Activate
+    Sheets("CotasAplicadas").Select
+    Range("A1:k5").Select
+    Selection.Copy
+    
+    'parte 2-4
+    
+    Windows("Planilha_Despesas.xlsb").Activate
+    Sheets("BD").Select
+    Range("A80:h85").Select
+    Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
+        :=False, Transpose:=False
+        
+        
+    'parte 1-4
+    
+    Windows("Planilha_Carteira.xlsx").Activate
+    Sheets("RendaFixa").Select
+    Range("A1:P70").Select
+    Selection.Copy
+    
+    'parte 2-4
+    
+    Windows("Planilha_Despesas.xlsb").Activate
+    Sheets("BD").Select
+    Range("A94:P163").Select
+    Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
+        :=False, Transpose:=False
+        
+    'parte 1-4
+    
+    Windows("Planilha_Carteira.xlsx").Activate
+    Sheets("Imoveis").Select
+    Range("A1:G10").Select
+    Selection.Copy
+    
+    'parte 2-4
+    
+    Windows("Planilha_Despesas.xlsb").Activate
+    Sheets("BD").Select
+    Range("A164:PG174").Select
+    Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
+        :=False, Transpose:=False
+        
+    'parte 1-4
+    
+    Windows("Planilha_Carteira.xlsx").Activate
+    Sheets("RendaVariavel").Select
+    Range("A1:K20").Select
+    Selection.Copy
+    
+    'parte 2-4
+    
+    Windows("Planilha_Despesas.xlsb").Activate
+    Sheets("BD").Select
+    Range("A177:K197").Select
+    Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
+        :=False, Transpose:=False
+        
+    'parte 3
+    
+    Windows("Planilha_Despesas.xlsb").Activate
+    Sheets("BD").Select
+    
+    'parte 4
+    
+    Windows("Planilha_Carteira.xlsx").Activate
+    Application.CutCopyMode = False
+    Workbooks("Planilha_Carteira.xlsx").Close SaveChanges:=False
+          
+     'parte 5
+     
+    Windows("Planilha_Despesas.xlsb").Activate
+
+    Sheets("BD").Select
+    
+
+
+End Sub
